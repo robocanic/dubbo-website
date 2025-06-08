@@ -7,7 +7,7 @@ linkTitle: 架构与安装
 no_list: true
 title: Admin 整体架构与安装步骤
 type: docs
-weight: 1
+weight: 2
 working_in_progress: true
 ---
 
