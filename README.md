@@ -46,7 +46,7 @@ hugo mod clean
 2. Start the server
 ```sh
 hugo server --disableFastRender
-# If you get stuck with 'hugo: downloading modules …' after running this command, please try to set GOPROXY by running `export GOPROXY="https://goproxy.cn|https://proxy.golang.com.cn"` and try again.
+# If you get stuck with 'hugo: downloading modules …' after running this command, please try to set GOPROXY by running `export GOPROXY="https://goproxy.cn,https://proxy.golang.com.cn,direct"` and try again.
 ```
 
 3. Navigate to `http://localhost:1313`

@@ -1,7 +1,13 @@
 
-<script src="/js/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+{{ if hugo.IsServer }}
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+{{ else }}
+{{ $popper := resources.Get "js/popper.min.js" | fingerprint }}
+{{ $bootstrap := resources.Get "js/bootstrap.min.js" | fingerprint }}
+<script src="{{ $popper.RelPermalink }}" integrity="{{ $popper.Data.Integrity }}" crossorigin="anonymous"></script>
+<script src="{{ $bootstrap.RelPermalink }}" integrity="{{ $bootstrap.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ end }}
 
 <!--init performance SDK-->
 <script>

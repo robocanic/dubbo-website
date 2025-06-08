@@ -8,6 +8,8 @@ no_list: true
 title: Admin 服务 Mock 功能简介
 type: docs
 weight: 4
+toc_hide: true
+hide_summary: true
 working_in_progress: true
 ---
 
